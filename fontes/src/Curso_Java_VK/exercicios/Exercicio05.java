@@ -21,7 +21,7 @@ public class Exercicio05 {
 				System.out.println("Carregando... ...\nAcesso Valido");
 				int contador = 0;
 				int tempoTotal = 0;
-				myLoop: while (true) {
+				do {
 					System.out.println("Olá " + usuario + ", escolha a opção desejada:");
 					System.out.println("1 - Registrar nova chamada");
 					System.out.println("2 - Tempo total gasto em chamadas");
@@ -33,19 +33,20 @@ public class Exercicio05 {
 						contador++;
 						System.out.println("Insira o tempo da ultima chamada em minutos:");
 						tempoTotal = tempoTotal + sc.nextInt();
-						continue myLoop;
+						break;
 					case "2":
 						System.out.println("Foram atendidas " + contador + " chamadas");
-						System.out.println("O tempo total gasto foi " + contador + " minutos");
-						continue myLoop;
+						System.out.println("O tempo total gasto foi " + tempoTotal + " minutos");
+						continue;
 					case "3":
 						continue login;
-					case "":
+					case "4":
 						break;
 					default:
-						continue myLoop;
+						break;
 					}
-				}		
+				} while (true);
+				
 			} else if (!login.equals(usuario)) {
 				System.out.println("Usuario desconhecido para o banco de dados. Tente novamente.");
 				continue;

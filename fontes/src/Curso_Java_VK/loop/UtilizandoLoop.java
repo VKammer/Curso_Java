@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UtilizandoLoop {
 	
-	/* Loop: faça "do" enquanto a condição for "while"
+	/* Loop: faï¿½a "do" enquanto a condiï¿½ï¿½o for "while"
 			do {
 				System.out.println("Insira o tempo da ultima chamada em minutos:");
 				minutos = minutos + sc.nextInt();
@@ -30,14 +30,14 @@ public class UtilizandoLoop {
 			senhaLogin = sc.nextLine();
 			if (login.equals(usuario) && senhaLogin.equals(senha)) {
 				System.out.println("Carregando... ...\nAcesso Valido");
-				System.out.println("Olá, " + usuario + ", quantas chamadas foram atendidos hoje?");
+				System.out.println("Olï¿½, " + usuario + ", quantas chamadas foram atendidos hoje?");
 				int chamadas = sc.nextInt();
 				do {
 					System.out.println("Insira o tempo da chamada " + contador + " em minutos:");
 					minutos = minutos + sc.nextInt();
 					contador ++;
 				} while (contador <= chamadas);
-				System.out.println("Tempo total nas ligações do dia = " + minutos + " minutos");
+				System.out.println("Tempo total nas ligaï¿½ï¿½es do dia = " + minutos + " minutos");
 			} else if (!login.equals(usuario)) {
 				System.out.println("Usuario desconhecido para o banco de dados. Tente novamente.");
 			} else {
@@ -47,6 +47,7 @@ public class UtilizandoLoop {
 		
 				
 		sc.close();
+		//teste
 		
 	}
 
