@@ -11,8 +11,10 @@ public class Exercicio05 {
 		String senha = "12345678";
 		String login = " ";
 		String senhaLogin = " ";
-
-		login: while (!(login.equals(usuario) && senhaLogin.equals(senha))) {
+// !true = false
+		boolean entrou = false;
+		myLogin: while (!entrou || (login.equals(usuario) && senhaLogin.equals(senha))) {
+			entrou = true;
 			System.out.println("Login: ");
 			login = sc.nextLine();
 			System.out.println("Insira sua senha");
@@ -27,21 +29,21 @@ public class Exercicio05 {
 					System.out.println("2 - Tempo total gasto em chamadas");
 					System.out.println("3 - Logout");
 					System.out.println("4 - Sair");
-					String menu = String.valueOf(sc.nextLine());
+					int menu = Integer.parseInt(sc.nextLine());
 					switch (menu) {
-					case "1":
+					case 1:
 						contador++;
 						System.out.println("Insira o tempo da ultima chamada em minutos:");
-						tempoTotal = tempoTotal + sc.nextInt();
+						tempoTotal = tempoTotal + Integer.parseInt(sc.nextLine());
 						break;
-					case "2":
+					case 2:
 						System.out.println("Foram atendidas " + contador + " chamadas");
 						System.out.println("O tempo total gasto foi " + tempoTotal + " minutos");
 						continue;
-					case "3":
-						continue login;
-					case "4":
-						break;
+					case 3:
+						continue myLogin;
+					case 4:
+						break myLogin;
 					default:
 						break;
 					}
