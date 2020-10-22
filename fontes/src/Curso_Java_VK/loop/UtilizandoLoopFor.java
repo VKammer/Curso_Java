@@ -7,9 +7,9 @@ public class UtilizandoLoopFor {
 		
 		//irá escrever 3 linhas
 		System.out.println("Exemplo 1:");
-		for(int i = 0/*inicia indice*/; i < quantidadeIteracoes/*se isso for verdadeiro executa o bloco*/; i++/*depois de executar o bloco incrementa o indice*/) {
-			System.out.println("Indice: " + i);//escreve de 0 a 2
-		}
+		for(int i = 0/*inicia indice*/; i < quantidadeIteracoes/*se isso for verdadeiro executa o bloco*/; i++) {
+				System.out.println("Indice: " + i);//escreve de 0 a 2
+			}
 		System.out.println("----\n");
 		
 		//irá escrever 4 linhas ... por causa do operador '<='
